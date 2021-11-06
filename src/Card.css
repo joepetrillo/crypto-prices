@@ -1,0 +1,31 @@
+.card {
+    background-color: #151F2B;
+    border-radius: 0.85rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card__branding {
+    display: flex;
+    align-items: center;
+}
+
+.card__image {
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    margin-right: 1.5rem;
+}
+
+.card__name {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.card__price {
+    font-size: 1.9rem;
+    font-weight: 400;
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+html {
+    box-sizing: border-box;
+    background: rgb(50,73,101);
+    background: linear-gradient(180deg, #324A67, #16212e);
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    color: white;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.App {
+}
+
+header {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.cards-wrapper {
+}
