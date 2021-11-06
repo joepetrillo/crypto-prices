@@ -19,7 +19,7 @@ export default function App() {
     <div className="App">
       <header>
         <h1>Latest Cryptocurrency Prices</h1>
-        {!loading && <h3>Last Updated at {data[0].coin_last_updated}</h3>}
+        {!loading && <h3>Last updated at {data[0].coin_last_updated}</h3>}
       </header>
       {!loading ?
         <div className="cards__wrapper">
