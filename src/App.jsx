@@ -6,21 +6,14 @@ export default function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  fetch("https://cryptocurrencyliveprices.com/api/")
-    .then(res => res.json())
-    .then(res => {
-      setData(res.slice(0, 30))
-      setLoading(false)
-    })
-
-  // useEffect(() => {
-  //   fetch("https://cryptocurrencyliveprices.com/api/")
-  //     .then(res => res.json())
-  //     .then(res => {
-  //       setData(res.slice(0, 30))
-  //       setLoading(false)
-  //     })
-  // }, []);
+  useEffect(() => {
+    fetch("https://cryptocurrencyliveprices.com/api/")
+      .then(res => res.json())
+      .then(res => {
+        setData(res.slice(0, 30))
+        setLoading(false)
+      })
+  }, []);
 
   return (
     <div className="App">
