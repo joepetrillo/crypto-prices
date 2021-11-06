@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import convertTime from "convert-time"
 import Card from "./Card"
 import "./App.css"
 
@@ -15,11 +16,25 @@ export default function App() {
       })
   }, []);
 
+  function parseTime(time) {
+    console.log(time);
+    let hour = parseInt(time.split(":")[0]);
+    hour -= 6;
+
+    if (hour < 0) {
+      hour += 24;
+    }
+
+    return convertTime(`${hour}${time.substring(2, 5)}`);
+  }
+
+  // subtract 6 hours. if hours is negative, hours = 24 + negative value
+
   return (
     <div className="App">
       <header>
         <h1>Latest Cryptocurrency Prices</h1>
-        {!loading && <h3>Last updated at {data[0].coin_last_updated}</h3>}
+        {!loading && <h3>Last updated at {parseTime(data[0].coin_last_updated.substring(11, 16))} EST</h3>}
       </header>
       {!loading ?
         <div className="cards__wrapper">
