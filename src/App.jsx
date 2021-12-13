@@ -19,7 +19,7 @@ export default function App() {
   function parseTime(time) {
     console.log(time);
     let hour = parseInt(time.split(":")[0]);
-    hour -= 6;
+    hour -= 7;
 
     if (hour < 0) {
       hour += 24;
@@ -27,8 +27,6 @@ export default function App() {
 
     return convertTime(`${hour}${time.substring(2, 5)}`);
   }
-
-  // subtract 6 hours. if hours is negative, hours = 24 + negative value
 
   return (
     <div className="App">
