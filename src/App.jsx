@@ -7,13 +7,19 @@ export default function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const getData = async () => {
+    try {
+      const res = await fetch("https://cryptocurrencyliveprices.com/api/");
+      const data = await res.json();
+      setData(data.slice(0, 30));
+      setLoading(false);
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
   useEffect(() => {
-    fetch("https://cryptocurrencyliveprices.com/api/")
-      .then(res => res.json())
-      .then(res => {
-        setData(res.slice(0, 30))
-        setLoading(false)
-      })
+    getData();
   }, []);
 
   function parseTime(time) {
