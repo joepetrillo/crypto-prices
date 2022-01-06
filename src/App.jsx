@@ -23,7 +23,6 @@ export default function App() {
   }, []);
 
   function parseTime(time) {
-    console.log(time);
     let hour = parseInt(time.split(":")[0]);
     hour -= 7;
 
