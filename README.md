@@ -1,6 +1,6 @@
 # crypto-prices
 
-I used this project as an introduction to communicating with APIs. This app no longer works due to the underlying APIs no longer being active.
+This app unfortunately no longer works due to the underlying APIs no longer being active.
 
 [Live Website](https://latest-crypto-prices.netlify.app/)
 
